@@ -19,6 +19,49 @@
     self.viewController = [[NPF3ViewController alloc] initWithNibName:@"NPF3ViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"data" ofType:@"plist"];
+    NSDictionary *tempDictionary = [NSDictionary dictionaryWithContentsOfFile:path];
+    NSArray *tempArray = [tempDictionary objectForKey:@"parks"];
+    
+    //create parks ivar
+    self.parks = [NSMutableArray array];
+    
+    for (id dict in tempArray)
+    {
+        NSString *parkName          = [dict objectForKey:@"parkName"];
+        NSString *parkLocation      = [dict objectForKey:@"parkLocation"];
+        float latitude              = [[dict objectForKey:@"latitude"] floatValue];
+        float longitude             = [[dict objectForKey:@"longitude"] floatValue];
+        CLLocation *location        = [[CLLocation alloc] initWithLatitude:latitude longitude:longitude];
+        NSString *dateFormed        = [dict objectForKey:@"dateFormed"];
+        NSString *area              = [dict objectForKey:@"area"];
+        NSString *link              = [dict objectForKey:@"link"];
+        NSString *imageLink         = [dict objectForKey:@"imageLink"];
+        NSString *parkDescription   = [dict objectForKey:@"parkDescription"];
+        
+        
+        
+        Park *p = [Park park];
+        p.parkName = parkName;
+        p.parkLocation = parkLocation;
+        p.location = location;
+        p.dateFormed = dateFormed;
+        p.area = area;
+        p.link = link;
+        p.imageLink = imageLink;
+        p.parkDescription = parkDescription;
+        
+        
+        
+        [self.parks addObject:p];
+    }
+    
+    for (Park *park in self.parks) {
+        NSLog(@"park = %@", park);
+    }
+
+    
     return YES;
 }
 

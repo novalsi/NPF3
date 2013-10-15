@@ -18,6 +18,10 @@
 		3FBC2CA2180D8170005D1DAB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FBC2CA1180D8170005D1DAB /* Default-568h@2x.png */; };
 		3FBC2CA5180D8170005D1DAB /* NPF3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FBC2CA4180D8170005D1DAB /* NPF3ViewController.m */; };
 		3FBC2CA8180D8170005D1DAB /* NPF3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FBC2CA6180D8170005D1DAB /* NPF3ViewController.xib */; };
+		3FBC2CAF180D817F005D1DAB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FBC2CAE180D817F005D1DAB /* MapKit.framework */; };
+		3FBC2CB1180D8185005D1DAB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FBC2CB0180D8185005D1DAB /* CoreLocation.framework */; };
+		3FBC2CB4180D81A1005D1DAB /* Park.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FBC2CB3180D81A1005D1DAB /* Park.m */; };
+		3FBC2CB6180D82A3005D1DAB /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FBC2CB5180D82A3005D1DAB /* data.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,11 @@
 		3FBC2CA3180D8170005D1DAB /* NPF3ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPF3ViewController.h; sourceTree = "<group>"; };
 		3FBC2CA4180D8170005D1DAB /* NPF3ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPF3ViewController.m; sourceTree = "<group>"; };
 		3FBC2CA7180D8170005D1DAB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NPF3ViewController.xib; sourceTree = "<group>"; };
+		3FBC2CAE180D817F005D1DAB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3FBC2CB0180D8185005D1DAB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3FBC2CB2180D81A1005D1DAB /* Park.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Park.h; path = ../Park.h; sourceTree = "<group>"; };
+		3FBC2CB3180D81A1005D1DAB /* Park.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Park.m; path = ../Park.m; sourceTree = "<group>"; };
+		3FBC2CB5180D82A3005D1DAB /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FBC2CB1180D8185005D1DAB /* CoreLocation.framework in Frameworks */,
+				3FBC2CAF180D817F005D1DAB /* MapKit.framework in Frameworks */,
 				3FBC2C8C180D8170005D1DAB /* UIKit.framework in Frameworks */,
 				3FBC2C8E180D8170005D1DAB /* Foundation.framework in Frameworks */,
 				3FBC2C90180D8170005D1DAB /* CoreGraphics.framework in Frameworks */,
@@ -56,6 +67,8 @@
 		3FBC2C7F180D8170005D1DAB = {
 			isa = PBXGroup;
 			children = (
+				3FBC2CB0180D8185005D1DAB /* CoreLocation.framework */,
+				3FBC2CAE180D817F005D1DAB /* MapKit.framework */,
 				3FBC2C91180D8170005D1DAB /* NPF3 */,
 				3FBC2C8A180D8170005D1DAB /* Frameworks */,
 				3FBC2C89180D8170005D1DAB /* Products */,
@@ -83,11 +96,14 @@
 		3FBC2C91180D8170005D1DAB /* NPF3 */ = {
 			isa = PBXGroup;
 			children = (
+				3FBC2CB2180D81A1005D1DAB /* Park.h */,
+				3FBC2CB3180D81A1005D1DAB /* Park.m */,
 				3FBC2C9A180D8170005D1DAB /* NPF3AppDelegate.h */,
 				3FBC2C9B180D8170005D1DAB /* NPF3AppDelegate.m */,
 				3FBC2CA3180D8170005D1DAB /* NPF3ViewController.h */,
 				3FBC2CA4180D8170005D1DAB /* NPF3ViewController.m */,
 				3FBC2CA6180D8170005D1DAB /* NPF3ViewController.xib */,
+				3FBC2CB5180D82A3005D1DAB /* data.plist */,
 				3FBC2C92180D8170005D1DAB /* Supporting Files */,
 			);
 			path = NPF3;
@@ -164,6 +180,7 @@
 				3FBC2CA0180D8170005D1DAB /* Default@2x.png in Resources */,
 				3FBC2CA2180D8170005D1DAB /* Default-568h@2x.png in Resources */,
 				3FBC2CA8180D8170005D1DAB /* NPF3ViewController.xib in Resources */,
+				3FBC2CB6180D82A3005D1DAB /* data.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +194,7 @@
 				3FBC2C98180D8170005D1DAB /* main.m in Sources */,
 				3FBC2C9C180D8170005D1DAB /* NPF3AppDelegate.m in Sources */,
 				3FBC2CA5180D8170005D1DAB /* NPF3ViewController.m in Sources */,
+				3FBC2CB4180D81A1005D1DAB /* Park.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

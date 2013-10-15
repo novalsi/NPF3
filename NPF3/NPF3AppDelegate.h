@@ -16,4 +16,6 @@
 
 @property (strong, nonatomic) NPF3ViewController *viewController;
 
+@property (strong, nonatomic) NSMutableArray *parks;
+
 @end
